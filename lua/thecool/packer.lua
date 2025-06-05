@@ -24,13 +24,7 @@ return require("packer").startup(function(use)
     requires = { { "nvim-lua/plenary.nvim" } },
   })
 
-  use({
-    "folke/tokyonight.nvim",
-    as = "tokyonight",
-    config = function()
-      vim.cmd("colorscheme tokyonight")
-    end,
-  })
+  use 'feline-nvim/feline.nvim'
 
   use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
@@ -55,6 +49,8 @@ return require("packer").startup(function(use)
       { "rafamadriz/friendly-snippets" },
     },
   })
+  
+  use("David-Kunz/gen.nvim")
 
   use("mfussenegger/nvim-jdtls")
 
